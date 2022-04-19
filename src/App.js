@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Expenses from './components/Expenses/Expenses';
+import NewExpense from './components/NewExpense/NewExpense';
 
 // test upload changes
 
@@ -50,8 +51,9 @@ const App = () => {
 
 	return (
 		<div className='App'>
-			<h2>let's get started...</h2>
-			<p>this is also visible...</p>
+			<br />
+			<NewExpense />
+			<br />
 			<Expenses items={expenses} />
 		</div>
 	);

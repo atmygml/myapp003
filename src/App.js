@@ -31,13 +31,29 @@ function App() {
 		},
 	];
 
-	return (
+	return React.createElement(
+		'div',
+		{},
+		React.createElement(
+			'h2',
+			{ className: 'App' },
+			"let's get started...",
+		),
+		React.createElement(
+			'p',
+			{},
+			'this is also visible too in this case...',
+		),
+		React.createElement(Expenses, { items: expenses }),
+	);
+
+	/* return (
 		<div className='App'>
 			<h2>let's get started...</h2>
 			<p>this is also visible...</p>
 			<Expenses items={expenses} />
 		</div>
-	);
+	); */
 }
 
 export default App;

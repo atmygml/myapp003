@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Expenses from './components/Expenses';
+import Expenses from './components/Expenses/Expenses';
 
 // test upload changes
 
@@ -32,7 +32,7 @@ function App() {
 		},
 	];
 
-	return React.createElement(
+	/* return React.createElement(
 		'div',
 		{},
 		React.createElement(
@@ -46,15 +46,15 @@ function App() {
 			'this is also visible too in this case...',
 		),
 		React.createElement(Expenses, { items: expenses }),
-	);
+	); */
 
-	/* return (
+	return (
 		<div className='App'>
 			<h2>let's get started...</h2>
 			<p>this is also visible...</p>
 			<Expenses items={expenses} />
 		</div>
-	); */
+	);
 }
 
 export default App;

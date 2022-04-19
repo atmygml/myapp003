@@ -49,12 +49,21 @@ const App = () => {
 		React.createElement(Expenses, { items: expenses }),
 	); */
 
+	let passUpExpense = '';
+
+	const addExpenseHandler = (expense) => {
+		console.log(expense);
+		passUpExpense = expense;
+	};
+
 	return (
 		<div className='App'>
 			<br />
-			<NewExpense />
+			<NewExpense onAddExpense={addExpenseHandler} />
 			<br />
 			<Expenses items={expenses} />
+			<br />
+			<div>{passUpExpense}</div>
 		</div>
 	);
 };

@@ -64,7 +64,7 @@ const App = () => {
 			<Expenses items={expenses} />
 			<br />
 			<div>
-				<p>{passUpExpense}</p>
+				<p style='color:white;'>{passUpExpense}</p>
 			</div>
 		</div>
 	);

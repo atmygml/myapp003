@@ -53,7 +53,7 @@ const App = () => {
 
 	const addExpenseHandler = (expense) => {
 		console.log(expense);
-		passUpExpense = expense;
+		passUpExpense = JSON.stringify(expense);
 	};
 
 	return (

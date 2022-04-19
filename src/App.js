@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Expenses from './components/Expenses/Expenses';
 import NewExpense from './components/NewExpense/NewExpense';
@@ -49,11 +49,11 @@ const App = () => {
 		React.createElement(Expenses, { items: expenses }),
 	); */
 
-	let passUpExpense = '';
+	const [passUpExpense, setPassUpExpense] = useState('');
 
 	const addExpenseHandler = (expense) => {
 		console.log(expense);
-		passUpExpense = JSON.stringify(expense);
+		setPassUpExpense(JSON.stringify(expense));
 	};
 
 	return (

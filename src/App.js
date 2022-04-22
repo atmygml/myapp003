@@ -5,7 +5,7 @@ import NewExpense from './components/NewExpense/NewExpense';
 
 // test upload changes
 
-const App = (props) => {
+const App = () => {
 	const expenses = [
 		{
 			id: 'e1',
@@ -49,7 +49,7 @@ const App = (props) => {
 		React.createElement(Expenses, { items: expenses }),
 	); */
 
-	const [passUpExpense, setPassUpExpense] = useState(props.expense);
+	const [passUpExpense, setPassUpExpense] = useState('');
 
 	const addExpenseHandler = (expense) => {
 		console.log(expense);

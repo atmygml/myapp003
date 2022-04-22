@@ -49,7 +49,7 @@ const App = () => {
 		React.createElement(Expenses, { items: expenses }),
 	); */
 
-	const [passUpExpense, setPassUpExpense] = useState('');
+	const [passUpExpense, setPassUpExpense] = useState(props.expense);
 
 	const addExpenseHandler = (expense) => {
 		console.log(expense);

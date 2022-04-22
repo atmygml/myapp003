@@ -62,7 +62,7 @@ const App = () => {
 	const saveDateHandler = (selectedDate) => {
 		console.log(selectedDate);
 		//selectedYearInApp = selectedDate;
-		setPassUpDate(selectedDate);
+		() => setPassUpDate(selectedDate);
 	};
 
 	return (

@@ -8,7 +8,7 @@ const Expenses = (props) => {
 	const [selectedYear, setSelectedYear] = useState('2020');
 
 	const saveSelectedDateHandler = (selectedDate) => {
-		() => setSelectedYear(selectedDate);
+		setSelectedYear(selectedDate);
 		props.onSaveDate(selectedYear);
 	};
 

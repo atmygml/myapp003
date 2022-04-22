@@ -50,19 +50,19 @@ const App = () => {
 	); */
 
 	const [passUpExpense, setPassUpExpense] = useState('');
-	const [passUpDate, setPassUpDate] = useState('');
+	//const [passUpDate, setPassUpDate] = useState('');
 
 	const addExpenseHandler = (expense) => {
 		console.log(expense);
 		setPassUpExpense(JSON.stringify(expense));
 	};
 
-	//const selectedYearInApp = '';
+	const selectedYearInApp = '';
 
 	const saveDateHandler = (selectedDate) => {
 		console.log(selectedDate);
-		//selectedYearInApp = selectedDate;
-		() => setPassUpDate(selectedDate);
+		selectedYearInApp = selectedDate;
+		//setPassUpDate(selectedDate);
 	};
 
 	return (
@@ -77,7 +77,7 @@ const App = () => {
 			</div>
 			<br />
 			<div>
-				<p style={{ color: 'white' }}>{passUpDate}</p>
+				<p style={{ color: 'white' }}>{selectedYearInApp}</p>
 			</div>
 			<br />
 		</div>

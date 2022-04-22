@@ -5,7 +5,7 @@ import ExpensesFilter from './ExpensesFilter';
 
 const Expenses = (props) => {
 	return (
-		<div>
+		<div className='expenses'>
 			<ExpensesFilter />
 			<Card className='expenses'>
 				<ExpenseItem

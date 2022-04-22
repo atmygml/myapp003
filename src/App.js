@@ -50,10 +50,16 @@ const App = () => {
 	); */
 
 	const [passUpExpense, setPassUpExpense] = useState('');
+	const [passUpDate, setPassUpDate] = useState('');
 
 	const addExpenseHandler = (expense) => {
 		console.log(expense);
 		setPassUpExpense(JSON.stringify(expense));
+	};
+
+	const saveDateHandler = (selectedDate) => {
+		console.log(selectedDate);
+		setPassUpDate(JSON.stringify(selectedDate));
 	};
 
 	return (
@@ -61,11 +67,16 @@ const App = () => {
 			<br />
 			<NewExpense onAddExpense={addExpenseHandler} />
 			<br />
-			<Expenses items={expenses} />
+			<Expenses onSaveDate={saveDateHandler} items={expenses} />
 			<br />
 			<div>
 				<p style={{ color: 'white' }}>{passUpExpense}</p>
 			</div>
+			<br />
+			<div>
+				<p style={{ color: 'white' }}>{passUpDate}</p>
+			</div>
+			<br />
 		</div>
 	);
 };

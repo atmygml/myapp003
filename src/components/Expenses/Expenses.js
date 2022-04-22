@@ -4,9 +4,13 @@ import Card from '../UI/Card';
 import ExpensesFilter from './ExpensesFilter';
 
 const Expenses = (props) => {
+	const saveSelectedDateHandler = (selectedDate) => {
+		props.onSaveDate(selectedDate);
+	};
+
 	return (
 		<div className='expenses'>
-			<ExpensesFilter />
+			<ExpensesFilter onSaveSelectedDate={saveSelectedDateHandler} />
 			<Card className='expenses'>
 				<ExpenseItem
 					title={props.items[0].title}

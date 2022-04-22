@@ -50,7 +50,7 @@ const App = () => {
 	); */
 
 	const [passUpExpense, setPassUpExpense] = useState('');
-	//const [passUpDate, setPassUpDate] = useState('');
+	const [passUpDate, setPassUpDate] = useState('');
 
 	const addExpenseHandler = (expense) => {
 		console.log(expense);
@@ -63,6 +63,7 @@ const App = () => {
 		console.log(selectedDate);
 		selectedYearInApp = selectedDate;
 		//setPassUpDate(selectedDate);
+		setPassUpDate(selectedYearInApp);
 	};
 
 	return (
@@ -77,7 +78,7 @@ const App = () => {
 			</div>
 			<br />
 			<div>
-				<p style={{ color: 'white' }}>{selectedYearInApp}</p>
+				<p style={{ color: 'white' }}>{passUpDate}</p>
 			</div>
 			<br />
 		</div>

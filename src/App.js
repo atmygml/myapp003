@@ -57,13 +57,9 @@ const App = () => {
 		setPassUpExpense(JSON.stringify(expense));
 	};
 
-	const selectedYearInApp = '';
-
 	const saveDateHandler = (selectedDate) => {
 		console.log(selectedDate);
-		selectedYearInApp = selectedDate;
-		//setPassUpDate(selectedDate);
-		setPassUpDate(selectedYearInApp);
+		setPassUpDate(selectedDate);
 	};
 
 	return (

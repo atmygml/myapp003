@@ -5,7 +5,7 @@ import NewExpense from './components/NewExpense/NewExpense';
 
 // test upload changes
 
-const App = () => {
+const App = (props) => {
 	const expenses = [
 		{
 			id: 'e1',

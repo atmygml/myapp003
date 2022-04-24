@@ -49,8 +49,10 @@ const App = () => {
 		React.createElement(Expenses, { items: expenses }),
 	); */
 
+	const yearInitApp = ['2020'];
+
 	const [passUpExpense, setPassUpExpense] = useState('');
-	const [passUpDate, setPassUpDate] = useState('');
+	const [passUpDate, setPassUpDate] = useState(yearInitApp);
 
 	const addExpenseHandler = (expense) => {
 		console.log(expense);
@@ -59,7 +61,7 @@ const App = () => {
 
 	const saveDateHandler = (selectedDate) => {
 		console.log(selectedDate);
-		setPassUpDate(selectedDate);
+		setPassUpDate((prevYearApp) => [selectedDate, ...prevYearApp]);
 	};
 
 	return (
@@ -74,7 +76,7 @@ const App = () => {
 			</div>
 			<br />
 			<div>
-				<p style={{ color: 'white' }}>{passUpDate}</p>
+				<p style={{ color: 'white' }}>{passUpDate[0]}</p>
 			</div>
 			<br />
 		</div>

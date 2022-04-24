@@ -30,7 +30,7 @@ const ExpensesFilter = (props) => {
 			</div>
 			<br />
 			<div>
-				<p style={{ color: 'white' }}>{selectedYearExp[0]}</p>
+				<p style={{ color: 'white' }}>{props.initialYear}</p>
 			</div>
 			<br />
 		</div>

@@ -8,11 +8,11 @@ const ExpensesFilter = (props) => {
 	const [selectedYearExp, setSelectedYearExp] = useState(initialY);
 
 	const selectDateHandler = (event) => {
-		props.onSaveSelectedDate(event.target.value);
 		setSelectedYearExp((prevYearExp) => [
 			event.target.value,
 			...prevYearExp,
 		]);
+		props.onSaveSelectedDate(selectedYearExp[0]);
 	};
 
 	return (

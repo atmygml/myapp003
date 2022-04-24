@@ -59,25 +59,21 @@ const App = () => {
 		setPassUpExpense(JSON.stringify(expense));
 	};
 
-	const saveDateHandler = (selectedDate) => {
+	/* const saveDateHandler = (selectedDate) => {
 		console.log(selectedDate);
 		//setPassUpDate((prevYearApp) => [selectedDate, ...prevYearApp]);
 		setPassUpDate(selectedDate);
-	};
+	}; */
 
 	return (
 		<div className='App'>
 			<br />
 			<NewExpense onAddExpense={addExpenseHandler} />
 			<br />
-			<Expenses onSaveDate={saveDateHandler} items={expenses} />
+			<Expenses items={expenses} />
 			<br />
 			<div>
 				<p style={{ color: 'white' }}>{passUpExpense}</p>
-			</div>
-			<br />
-			<div>
-				<p style={{ color: 'white' }}>{passUpDate}</p>
 			</div>
 			<br />
 		</div>

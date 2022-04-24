@@ -5,20 +5,20 @@ import Card from '../UI/Card';
 import ExpensesFilter from './ExpensesFilter';
 
 const Expenses = (props) => {
-	//const yearInit = ['2020'];
+	const yearInit = ['2020'];
 
-	//const [selectedYear, setSelectedYear] = useState(yearInit);
+	const [selectedYear, setSelectedYear] = useState(yearInit);
 
 	const saveSelectedDateHandler = (selectedDate) => {
-		//setSelectedYear((prevYear) => [selectedDate, ...prevYear]);
+		setSelectedYear((prevYear) => [selectedDate, ...prevYear]);
 		//props.onSaveDate(selectedYear[0]);
-		props.onSaveDate(selectedDate);
+		//props.onSaveDate(selectedDate);
 	};
 
 	return (
 		<div className='expenses'>
 			<ExpensesFilter
-				//intialYear={selectedYear[0]}
+				initialYear={selectedYear[0]}
 				onSaveSelectedDate={saveSelectedDateHandler}
 			/>
 			<Card className='expenses'>

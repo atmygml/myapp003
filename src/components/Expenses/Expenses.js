@@ -11,8 +11,6 @@ const Expenses = (props) => {
 
 	const saveSelectedDateHandler = (selectedDate) => {
 		setSelectedYear(selectedDate);
-		//props.onSaveDate(selectedYear[0]);
-		//props.onSaveDate(selectedDate);
 	};
 
 	return (

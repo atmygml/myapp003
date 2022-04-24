@@ -3,10 +3,6 @@ import React, { useState } from 'react';
 import './ExpensesFilter.css';
 
 const ExpensesFilter = (props) => {
-	//const initialY = [''];
-
-	//const [selectedYearExp, setSelectedYearExp] = useState(initialY);
-
 	const selectDateHandler = (event) => {
 		props.onSaveSelectedDate(event.target.value);
 	};
@@ -18,7 +14,6 @@ const ExpensesFilter = (props) => {
 					<label>Filter by year</label>
 					<select
 						value={props.initialYear}
-						//value={selectedYearExp[0]}
 						onChange={selectDateHandler}
 					>
 						<option value='2022'>2022</option>

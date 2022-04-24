@@ -3,8 +3,6 @@ import './App.css';
 import Expenses from './components/Expenses/Expenses';
 import NewExpense from './components/NewExpense/NewExpense';
 
-// test upload changes
-
 const App = () => {
 	const expenses = [
 		{
@@ -49,8 +47,6 @@ const App = () => {
 		React.createElement(Expenses, { items: expenses }),
 	); */
 
-	//const yearInitApp = [''];
-
 	const [passUpExpense, setPassUpExpense] = useState('');
 	const [passUpDate, setPassUpDate] = useState('');
 
@@ -58,12 +54,6 @@ const App = () => {
 		console.log(expense);
 		setPassUpExpense(JSON.stringify(expense));
 	};
-
-	/* const saveDateHandler = (selectedDate) => {
-		console.log(selectedDate);
-		//setPassUpDate((prevYearApp) => [selectedDate, ...prevYearApp]);
-		setPassUpDate(selectedDate);
-	}; */
 
 	return (
 		<div className='App'>

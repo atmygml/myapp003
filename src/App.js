@@ -49,7 +49,7 @@ const App = () => {
 		React.createElement(Expenses, { items: expenses }),
 	); */
 
-	const yearInitApp = ['2020'];
+	const yearInitApp = [''];
 
 	const [passUpExpense, setPassUpExpense] = useState('');
 	const [passUpDate, setPassUpDate] = useState(yearInitApp);

@@ -3,16 +3,12 @@ import React, { useState } from 'react';
 import './ExpensesFilter.css';
 
 const ExpensesFilter = (props) => {
-	const initialY = [''];
+	//const initialY = [''];
 
-	const [selectedYearExp, setSelectedYearExp] = useState(initialY);
+	//const [selectedYearExp, setSelectedYearExp] = useState(initialY);
 
 	const selectDateHandler = (event) => {
-		setSelectedYearExp((prevYearExp) => [
-			event.target.value,
-			...prevYearExp,
-		]);
-		props.onSaveSelectedDate(selectedYearExp[0]);
+		props.onSaveSelectedDate(event.target.value);
 	};
 
 	return (

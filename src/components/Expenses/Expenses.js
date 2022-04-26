@@ -22,7 +22,7 @@ const Expenses = (props) => {
 	);
 
 	if (filteredExpenses.length > 0) {
-		filteredExpenses.map((expense) => (
+		expensesContent = filteredExpenses.map((expense) => (
 			<ExpenseItem
 				key={expense.id}
 				title={expense.title}

@@ -20,14 +20,26 @@ const Expenses = (props) => {
 				onSaveSelectedDate={saveSelectedDateHandler}
 			/>
 			<Card className='expenses'>
-				{props.items.map((expense) => (
+				{/* {props.items.map((expense) => (
 					<ExpenseItem
 						key={expense.id}
 						title={expense.title}
 						amount={expense.amount}
 						date={expense.date}
 					/>
-				))}
+				))} */}
+				{props.items.filter((expense) => {
+					if (expense.date.getFullYear() == selectedYear) {
+						return (
+							<ExpenseItem
+								key={expense.id}
+								title={expense.title}
+								amount={expense.amount}
+								date={expense.date}
+							/>
+						);
+					}
+				})}
 			</Card>
 		</div>
 	);

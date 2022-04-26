@@ -21,7 +21,7 @@ const Expenses = (props) => {
 		<p style={{ color: 'white' }}>No expenses found...</p>
 	);
 
-	if (expensesContent.length > 0) {
+	if (filteredExpenses.length > 0) {
 		filteredExpenses.map((expense) => (
 			<ExpenseItem
 				key={expense.id}
